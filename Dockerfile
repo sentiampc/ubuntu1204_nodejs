@@ -1,4 +1,4 @@
-FROM shippableimages/ubuntu1204_base:0.0.4
+FROM shipimg/ubuntu1204_base:master.1
 
 RUN apt-get update && apt-get install -y \
     ca-certificates \
