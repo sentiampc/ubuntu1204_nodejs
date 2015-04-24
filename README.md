@@ -6,6 +6,7 @@ Shippable CI image for Node.js on Ubuntu 12.04. Available Node.js versions:
 1. 0.8
 2. 0.10
 3. 0.11
+4. 0.12
 
 ## How to use
 You can use this image to run node.js builds on Shippable. Just update your
@@ -19,6 +20,7 @@ node_js:
   - 0.8
   - 0.10
   - 0.11
+  - 0.12
 
 build_image: shippableimages/ubuntu1204_nodejs
 
