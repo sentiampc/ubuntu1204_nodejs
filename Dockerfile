@@ -8,6 +8,11 @@ RUN apt-get update && apt-get install -y \
 RUN add-apt-repository -y ppa:chris-lea/node.js && \
     apt-get update && \
     apt-get install -y nodejs;
+	
+# Install awscli
+RUN apt-get install -y python-dev;
+RUN pip install awsebcli;
+
 
 # Force NVM_DIR so the installations go to the right place
 ENV NVM_DIR /root/.nvm
