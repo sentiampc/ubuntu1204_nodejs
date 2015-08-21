@@ -1,14 +1,17 @@
 FROM shipimg/ubuntu1204_base:latest
 
-RUN apt-get update && apt-get install -y \
-    ca-certificates \
-	python-dev \
-    curl;
+
 
 # Install a default nodejs for the system
 RUN add-apt-repository -y ppa:chris-lea/node.js && \
     apt-get update && \
-    apt-get install -y nodejs;
+	apt-get -y upgrade &&\
+    apt-get install -yq nodejs \
+	samba \
+	gettext \
+	ca-certificates \
+	python-dev \
+	curl;
 	
 
 RUN pip install awsebcli;
