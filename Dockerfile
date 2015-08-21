@@ -30,7 +30,7 @@ RUN . /root/.nvm/nvm.sh && nvm install 0.12;
 #RUN . /root/.nvm/nvm.sh && nvm alias default 0.12;
 
 
-RUN npm install -g npm@3.0.3
+RUN npm install -g npm@3.1.3
 RUN npm install gulpjs/gulp-cli#4.0 bower -g
 
 CMD [ "node" ]
