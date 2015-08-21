@@ -14,7 +14,7 @@ RUN add-apt-repository -y ppa:chris-lea/node.js && \
 	curl;
 	
 
-RUN pip install awsebcli;
+RUN pip install awsebcli awscli;
 
 # Force NVM_DIR so the installations go to the right place
 ENV NVM_DIR /root/.nvm
