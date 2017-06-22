@@ -1,4 +1,5 @@
-FROM shipimg/ubuntu1204_base:latest
+FROM shippableimages/ubuntu1204_base:latest
+
 
 
 
@@ -30,7 +31,7 @@ RUN . /root/.nvm/nvm.sh && nvm install 0.12;
 #RUN . /root/.nvm/nvm.sh && nvm alias default 0.12;
 
 
-RUN npm install -g npm@v3.x-latest
-RUN npm install gulpjs/gulp-cli#4.0 bower pm2 -g
+RUN npm install -g npm@1.4.28
+RUN npm install -g grunt-cli
 
 CMD [ "node" ]
