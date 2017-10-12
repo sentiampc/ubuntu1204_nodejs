@@ -12,9 +12,13 @@ RUN add-apt-repository -y ppa:chris-lea/node.js && \
 	ca-certificates \
 	python-dev \
 	curl;
-	
 
-RUN pip install awsebcli awscli;
+# Install setuptools
+RUN curl https://bootstrap.pypa.io/ez_setup.py | python && \
+    pip install -U pip setuptools;
+
+# Install EB cli version 3.11.0
+RUN pip install awsebcli==3.11.0 awscli;
 
 # Force NVM_DIR so the installations go to the right place
 ENV NVM_DIR /root/.nvm
